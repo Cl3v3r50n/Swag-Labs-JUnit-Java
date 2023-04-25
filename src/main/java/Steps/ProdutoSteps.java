@@ -2,6 +2,7 @@ package Steps;
 
 import cucumber.api.java.it.Quando;
 import org.openqa.selenium.By;
+import pageObjects.ProdutoPage;
 import utils.ContextoSetup;
 
 public class ProdutoSteps {
@@ -12,11 +13,8 @@ public class ProdutoSteps {
     }
     @Quando("^eu incluo o produto carrinho$")
     public void euIncluoOProdutoCarrinho() throws InterruptedException {
-        Thread.sleep(5000);
-
-        contextoSetup.driver.findElement(By.xpath("//*[contains(text(),'Sauce Labs Backpack')]")).click();
-        contextoSetup.driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
-        contextoSetup.driver.findElement(By.name("back-to-products")).click();
+        ProdutoPage produtoPage = new ProdutoPage(contextoSetup.driver);
+        produtoPage.addBackpack();
 
     }
 }
