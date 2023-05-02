@@ -3,16 +3,11 @@ package pageObjects;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 public class PagamentoPage {
-
     public WebDriver driver;
-
     public PagamentoPage(WebDriver driver) throws InterruptedException {
         this.driver = driver;
-
     }
-
     By btnCarrinho = By.xpath("//*[contains(@class, 'shopping_cart_link')]");
     By btnCheckout = By.id("checkout");
     By txtFirstName = By.xpath("//input[@id = 'first-name']");
@@ -31,7 +26,6 @@ public class PagamentoPage {
         driver.findElement(btnCheckout).click();
 
     }
-
     public void preencherDadosPagamento() throws InterruptedException {
         driver.findElement(txtFirstName).sendKeys("Cleverson");
         driver.findElement(txtLastName).sendKeys("Santos");
@@ -40,7 +34,6 @@ public class PagamentoPage {
         Thread.sleep(5000);
         driver.findElement(btnContinue).click();
     }
-
     public void confirmacaoCompra(){
         String confirmacaoProduto = driver.findElement(lblProduto).getText();
         Assert.assertEquals("Sauce Labs Backpack", confirmacaoProduto);
@@ -50,7 +43,6 @@ public class PagamentoPage {
 
         driver.findElement(btnFinish).click();
     }
-
     public void validarMensagemPagamento(String mensagemSucesso) throws InterruptedException {
         String mensagemPagamento = driver.findElement(lblPagamentoSucesso).getText();
         Assert.assertEquals(mensagemSucesso, mensagemPagamento);
@@ -58,14 +50,4 @@ public class PagamentoPage {
         Thread.sleep(5000);
         driver.quit();
     }
-
 }
-
-
-
-
-
-
-
-
-
