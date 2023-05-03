@@ -2,10 +2,7 @@ package Steps;
 
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Então;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import pageObjects.PagamentoPage;
-import pageObjects.ProdutoPage;
 import utils.ContextoSetup;
 
 public class PagamentoSteps {
@@ -16,7 +13,8 @@ public class PagamentoSteps {
     }
     @E("^eu efetuo o pagamento$")
     public void euEfetuoOPagamento() throws InterruptedException {
-        PagamentoPage pagamentoPage = new PagamentoPage(contextoSetup.driver);
+//        PagamentoPage pagamentoPage = new PagamentoPage(contextoSetup.driver);
+        PagamentoPage pagamentoPage = contextoSetup.gerenciarPO.getPagamentoPage();
         pagamentoPage.acessarCarrinho();
         pagamentoPage.preencherDadosPagamento();
         pagamentoPage.confirmacaoCompra();
@@ -25,7 +23,7 @@ public class PagamentoSteps {
 
     @Então("^eu irei visualizar a mensagem \"([^\"]*)\"$")
     public void eu_irei_visualizar_a_mensagem(String mensagemSucesso) throws InterruptedException {
-        PagamentoPage pagamentoPage = new PagamentoPage(contextoSetup.driver);
+        PagamentoPage pagamentoPage = contextoSetup.gerenciarPO.getPagamentoPage();
         pagamentoPage.validarMensagemPagamento(mensagemSucesso);
     }
 }
