@@ -1,7 +1,7 @@
 package Steps;
 
-import cucumber.api.java.pt.E;
-import cucumber.api.java.pt.Então;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Então;
 import pageObjects.PagamentoPage;
 import utils.ContextoSetup;
 

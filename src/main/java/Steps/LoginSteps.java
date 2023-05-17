@@ -1,6 +1,6 @@
 package Steps;
 
-import cucumber.api.java.es.Dado;
+import io.cucumber.java.pt.Dado;
 import pageObjects.LoginPage;
 import utils.ContextoSetup;
 

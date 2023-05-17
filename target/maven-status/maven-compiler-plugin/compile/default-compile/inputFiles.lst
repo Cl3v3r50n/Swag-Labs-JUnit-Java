@@ -1,1 +1,10 @@
-C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\org\example\Main.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\Steps\LoginSteps.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\Steps\PagamentoSteps.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\utils\ContextoSetup.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\pageObjects\PagamentoPage.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\Steps\Hooks.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\pageObjects\LoginPage.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\pageObjects\ProdutoPage.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\Steps\ProdutoSteps.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\pageObjects\GerenciarPO.java
+C:\Users\cnas\IdeaProjects\Swag-Labs\src\main\java\utils\BaseTeste.java

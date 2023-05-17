@@ -1,6 +1,6 @@
 package Steps;
 
-import cucumber.api.java.it.Quando;
+import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.By;
 import pageObjects.GerenciarPO;
 import pageObjects.ProdutoPage;

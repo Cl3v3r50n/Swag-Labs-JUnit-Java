@@ -1,8 +1,11 @@
 package pageObjects;
 
+import com.github.javafaker.Faker;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.DadosFakes;
+
 public class PagamentoPage {
     public WebDriver driver;
     public PagamentoPage(WebDriver driver) throws InterruptedException {
@@ -27,9 +30,21 @@ public class PagamentoPage {
 
     }
     public void preencherDadosPagamento() throws InterruptedException {
-        driver.findElement(txtFirstName).sendKeys("Cleverson");
-        driver.findElement(txtLastName).sendKeys("Santos");
-        driver.findElement(txtPostalCode).sendKeys("0123456");
+        Faker faker = new Faker();
+        DadosFakes dadosFakes = new DadosFakes();
+        String primeiroNome = faker.address().firstName();
+        dadosFakes.setPrimeiroNome(primeiroNome);
+
+        String ultimoNome = faker.address().lastName();
+        dadosFakes.setUltimoNome(ultimoNome);
+
+        String cep = faker.address().zipCode();
+        dadosFakes.setCep(cep);
+
+
+        driver.findElement(txtFirstName).sendKeys(dadosFakes.getPrimeiroNome());
+        driver.findElement(txtLastName).sendKeys(dadosFakes.getUltimoNome());
+        driver.findElement(txtPostalCode).sendKeys(dadosFakes.getCep());
 
         Thread.sleep(5000);
         driver.findElement(btnContinue).click();
@@ -48,6 +63,6 @@ public class PagamentoPage {
         Assert.assertEquals(mensagemSucesso, mensagemPagamento);
 
         Thread.sleep(5000);
-        driver.quit();
+//        driver.quit();
     }
 }

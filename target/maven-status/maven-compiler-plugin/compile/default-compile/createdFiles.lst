@@ -1,1 +1,10 @@
-org\example\Main.class
+Steps\ProdutoSteps.class
+utils\ContextoSetup.class
+pageObjects\LoginPage.class
+Steps\PagamentoSteps.class
+utils\BaseTeste.class
+Steps\Hooks.class
+Steps\LoginSteps.class
+pageObjects\ProdutoPage.class
+pageObjects\PagamentoPage.class
+pageObjects\GerenciarPO.class
