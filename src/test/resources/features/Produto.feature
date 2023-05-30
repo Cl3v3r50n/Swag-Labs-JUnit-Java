@@ -23,4 +23,4 @@
 
     Exemplos:
       | mensagem                    |
-      | Thank you for your order!   |
+      | Thank you for your order!s   |
